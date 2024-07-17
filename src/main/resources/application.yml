@@ -3,6 +3,12 @@
 spring:
   application:
     name: security
+    security:
+      jwt:
+        secret-key: b99b9d33cde75f6a808b672cac41d36311bdb7b8c0a9ba7000bc3e77239ba561
+        expiration: 86400000 # a day
+        refresh-token:
+          expiration: 604800000 # 7 days
   datasource:
     url: jdbc:mysql://localhost:3306/security
     username: springstudent
@@ -12,3 +18,8 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
+
+
+
+
+
